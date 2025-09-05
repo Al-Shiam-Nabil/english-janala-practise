@@ -127,8 +127,16 @@
           </p>
 
           <form class="">
-            <input type="text" class="input block mx-auto sm:mx-0" placeholder="Enter Your Name" />
-            <input type="password" class="input block mt-4 mx-auto sm:mx-0" placeholder="Password" />
+            <input
+              type="text"
+              class="input block mx-auto sm:mx-0"
+              placeholder="Enter Your Name"
+            />
+            <input
+              type="password"
+              class="input block mt-4 mx-auto sm:mx-0"
+              placeholder="Password"
+            />
 
             <button class="btn btn-primary mt-4 block mx-auto sm:mx-0">
               Get Started
@@ -157,35 +165,54 @@
           class="flex justify-center items-center gap-3 flex-wrap my-8 w-11/12 mx-auto"
         ></div>
 
-        <!-- loading spinner -->
-         <section id="loading-spinner" class="hidden">
-          <span class="loading loading-bars loading-xl"></span>
-         </section>
+        <!-- search bar -->
+        <div class="join mt-6">
+          <div>
+            <label class="validator join-item">
+              <input
+                id="search-input"
+                type="text"
+                placeholder="Enter Word..."
+                required
+                class="input w-[250px] sm:w-[400px]"
+              />
+            </label>
+          </div>
+          <button id="search-btn" class="btn btn-primary join-item">
+            Search
+          </button>
+        </div>
 
+        <!-- loading spinner -->
+        <section id="loading-spinner" class="hidden">
+          <span class="loading loading-bars loading-xl"></span>
+        </section>
 
         <!-- word card container -->
-         <section id="word-container" class="bg-gray-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-6 md:py-8 gap-5 mt-14 w-full md:max-w-11/12 mx-auto md:rounded-xl"> 
+        <section
+          id="word-container"
+          class="bg-gray-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-6 md:py-8 gap-5 mt-14 w-full md:max-w-11/12 mx-auto md:rounded-xl"
+        >
           <!-- card -->
 
           <!-- default message -->
-           <div class="col-span-full space-y-3">
-            <p class="text-gray-500 text-lg font-bangla">আপনি এখনো কোন Lesson Select করেন নি</p>
-            <h3 class="font-bold text-3xl font-bangla">একটি Lesson Select করুন।</h3>
-           </div>
-         </section>
-         
+          <div class="col-span-full space-y-3">
+            <p class="text-gray-500 text-lg font-bangla">
+              আপনি এখনো কোন Lesson Select করেন নি
+            </p>
+            <h3 class="font-bold text-3xl font-bangla">
+              একটি Lesson Select করুন।
+            </h3>
+          </div>
+        </section>
       </section>
-
-      
     </main>
 
     <!-- Open the modal using ID.showModal() method -->
-<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
-<dialog id="details_modal" class="modal modal-bottom sm:modal-middle">
-  <div id="details-box" class="modal-box space-y-3">
-
-  </div>
-</dialog>
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="details_modal" class="modal modal-bottom sm:modal-middle">
+      <div id="details-box" class="modal-box space-y-3"></div>
+    </dialog>
 
     <!-- js link added -->
     <script src="./scripts/index.js"></script>
