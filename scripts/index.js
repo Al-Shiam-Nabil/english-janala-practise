@@ -13,6 +13,23 @@ const removeActive = () => {
     });
 };
 
+
+// pronounce word function
+// function pronounceWord(word) {
+//   const utterance = new SpeechSynthesisUtterance(word);
+//   utterance.lang = "en-EN"; // English
+//   window.speechSynthesis.speak(utterance);
+// }
+
+function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = "en-EN";
+    window.speechSynthesis.speak(utterance);
+}
+
+
+
+
 // loading spinner function
 
 const loadingSpinner = (status, id) => {
@@ -117,6 +134,7 @@ const displayWord = (words) => {
     words.forEach((word) => {
         // create new div
         const cardDiv = document.createElement("div");
+
         cardDiv.innerHTML = `
 
 <div class="bg-white p-8 rounded-xl shadow-sm space-y-4">
@@ -138,7 +156,7 @@ const displayWord = (words) => {
   <div class="flex justify-between w-full">
     <button  onclick="loadWordDetails(${word.id
             })" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF50]"><i class="fa-solid fa-circle-info"></i></button>
-    <button class="btn bg-[#1A91FF10] hover:bg-[#1A91FF50]"><i class="fa-solid fa-volume-high"></i></button>
+    <button onclick="pronounceWord('${word.word}')" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF50]"><i class="fa-solid fa-volume-high"></i></button>
   </div>
 </div>
 
